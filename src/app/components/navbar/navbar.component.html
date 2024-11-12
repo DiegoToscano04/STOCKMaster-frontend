@@ -1,3 +1,24 @@
-<div class ="text-center">
+<mat-toolbar color="primary" class="navbar">
 
-</div>>
+    <a [routerLink]="'/'" aria-label="Inicio" class="navbar-icon">
+        <img src="../../../assets/LogoDorado.png" alt="STOCKMaster Logo" class="navbar-logo" />
+    </a>
+    <span class="navbar-title">STOCKMaster</span>
+  
+    <span class="navbar-spacer"></span>
+  
+    <a [routerLink]="'/dashboard'" mat-button class="navbar-link">Dashboard</a>
+    <a [routerLink]="'/productos'" mat-button class="navbar-link">Productos</a>
+    <a [routerLink]="'/reportes'" mat-button class="navbar-link">Reportes</a>
+  
+    <span class="navbar-spacer"></span>
+    <a [routerLink]="'/login'" mat-button class="navbar-link">
+      <mat-icon class="navbar-icon">login</mat-icon>
+      Iniciar sesión
+    </a>
+    <a [routerLink]="'/signup'" mat-button class="navbar-link">
+      <mat-icon class="navbar-icon">person_add</mat-icon>
+      Registrar
+    </a>
+  </mat-toolbar>
+  

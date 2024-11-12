@@ -1,35 +1,28 @@
-
-    <div class = "bootstrap-wrapper">
-        <div class = "container">
-          <div class = "row mt20">
-            <div class = "col-md-6 offset-md-3">
-              <mat-card>
-                <div class = "container text-center">
-                    <img src="../../../assets/STOCKMaster.png" width = "100" height="100">
-                </div>
-                <h1 class = "text-center"> Inicio de sesión</h1>
-                <form action="">
-
-                    <mat-form-field class = "full-width" appearance="outline">
-                        <mat-label>Nombre de Usuario</mat-label>
-                        <input matInput placeholder="Digite su Nombre de Usuario" required="">
-                    </mat-form-field>
- 
-                    <mat-form-field class = "full-width" appearance="outline">
-                        <mat-label>Contraseña</mat-label>
-                        <input type = "password" matInput placeholder="Digite su Nombre de Usuario" required="">   
-                    </mat-form-field>
-                    <br>
-                    <div class = "container text-center">
-                        <button mat mat-raised-button color="primary">Iniciar sesión</button>
-                        <button type = "reset" style = "margin-left: 20px;"  mat mat-raised-button color="accent">Cancelar</button>
-                    </div>
-      
-                  <br><br>
-      
-                </form>
-              </mat-card>
-            </div>
-          </div>
-        </div>
+<div class="login-wrapper">
+  <div class="login-card">
+    <mat-card class="card-container">
+      <div class="logo-container">
+        <img src="../../../assets/STOCKMaster.png" width="80" height="80" alt="STOCKMaster Logo" />
       </div>
+      <h2 class="login-title">Bienvenido a STOCKMaster</h2>
+      <p class="login-subtitle">Inicia sesión para acceder a la plataforma</p>
+
+      <form action="">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Nombre de Usuario</mat-label>
+          <input matInput placeholder="Digite su Nombre de Usuario" required />
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput placeholder="Digite su Contraseña" required />
+        </mat-form-field>
+
+        <div class="button-container">
+          <button mat-raised-button color="primary" class="login-button">Iniciar sesión</button>
+          <button type="reset" mat-stroked-button color="accent" class="cancel-button">Cancelar</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>
