@@ -1,9 +1,11 @@
   *{
     box-sizing: border-box;
   }
-  body{
+  
+ html, body{
+    padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     overflow: hidden;
     font-family: "Lato", sans-serif;
@@ -17,7 +19,7 @@
   }
   
   .login-card .card-container {
-    max-width: 430px;
+    max-width: 700px;
     padding: 50px 30px 30px 30px;
     border-radius: 40px;
     background-color: #ecf0f3;

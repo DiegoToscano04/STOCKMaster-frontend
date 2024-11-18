@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-}
+  loginData ={
+    "username": '',
+    "password": ''
+  }
+  constructor(){}
+    ngOnInit(): void {
+      
+    }
+    formSubmit(){
+      console.log('Click en el botón de login')
+    }
+  }
+
+
