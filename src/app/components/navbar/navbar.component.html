@@ -1,20 +1,20 @@
 <mat-toolbar color="primary" class="navbar">
+  <a [routerLink]="'/home'" aria-label="Inicio" class="navbar-icon">
+    <img src="../../../assets/LogoDorado.png" alt="STOCKMaster Logo" class="navbar-logo" />
+  </a>
+  <span class="navbar-title">STOCKMaster</span>
 
-    <a [routerLink]="'/'" aria-label="Inicio" class="navbar-icon">
-        <img src="../../../assets/LogoDorado.png" alt="STOCKMaster Logo" class="navbar-logo" />
-    </a>
-    <span class="navbar-title">STOCKMaster</span>
-  
-    <span class="navbar-spacer"></span>
-  
-    <span class="navbar-spacer"></span>
-    <a [routerLink]="'/login'" mat-button class="navbar-link">
-      <mat-icon class="navbar-icon">login</mat-icon>
-      Iniciar sesión
-    </a>
-    <a [routerLink]="'/signup'" mat-button class="navbar-link">
-      <mat-icon class="navbar-icon">person_add</mat-icon>
-      Registrar
-    </a>
-  </mat-toolbar>
-  
+  <span class="navbar-spacer"></span>
+
+  <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-button class="navbar-link">
+    <mat-icon class="navbar-icon">login</mat-icon>
+    Iniciar sesión
+  </a>
+
+  <div *ngIf="isLoggedIn" class="navbar-actions">
+    <button mat-button class="navbar-link" (click)="logout()">
+      <mat-icon class="navbar-icon">logout</mat-icon>
+      Cerrar sesión
+    </button>
+  </div>
+</mat-toolbar>

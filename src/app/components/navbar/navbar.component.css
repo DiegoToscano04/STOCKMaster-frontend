@@ -49,5 +49,14 @@
     text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.6); 
   }
   
-  
-  
+.navbar-welcome {
+  text-transform: none;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-link {
+  text-transform: none;
+  font-weight: bold;
+  color: white;
+}

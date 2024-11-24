@@ -11,6 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -19,6 +20,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
+import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +34,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     DashboardComponent,
     UserDashboardComponent,
     ProfileComponent,
+    SidebarComponent,
+    BienvenidoComponent,
 
   ],
   imports: [
@@ -41,7 +47,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     MatInputModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

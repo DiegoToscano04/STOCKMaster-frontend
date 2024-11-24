@@ -5,10 +5,12 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component:HomeComponent,
     pathMatch: 'full'
   },
@@ -25,10 +27,20 @@ const routes: Routes = [
   {
     path:'admin',
     component:DashboardComponent,
-    pathMatch: 'full'
+   children:[
+    {
+        path:'profile',
+        component:ProfileComponent
+    },
+    {
+      path:'',
+      component: BienvenidoComponent
+    }
+    
+   ]
   },
   {
-    path:'user',
+    path:'user-dashboard',
     component:UserDashboardComponent,
     pathMatch: 'full'
   }
