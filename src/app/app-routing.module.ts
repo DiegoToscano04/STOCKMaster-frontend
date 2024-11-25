@@ -7,6 +7,7 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
+import { ProductsComponent } from './pages/products/products.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,11 @@ const routes: Routes = [
     path:'user-dashboard',
     component:UserDashboardComponent,
     pathMatch: 'full'
+  },
+  {
+    path:'products',
+    component:ProductsComponent,
+    pathMatch:'full'
   }
 ];
 

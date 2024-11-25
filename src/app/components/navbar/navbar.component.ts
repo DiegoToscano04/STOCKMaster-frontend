@@ -1,27 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  isLoggedIn = false;
+  isLoggedIn = false;  
+  isInHomePage = false;  
+  isInAdminPage = false; 
+  isInProductsPage = false; 
 
-  constructor(private router: Router){}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
     
-    this.updateLoginStatus();
-    this.router.events.subscribe(() => this.updateLoginStatus());
+        this.isInHomePage = event.url === '/home';
+        this.isInAdminPage = event.url === '/admin';
+        this.isInProductsPage = event.url === '/products';
+
+      
+        this.updateLoginStatus();
+      }
+    });
   }
 
-  updateLoginStatus():void{
-    this.isLoggedIn = this.router.url.includes('/admin');
+  updateLoginStatus(): void {
+   
   }
 
-  logout():void{
+  logout(): void {
     this.isLoggedIn = false;
     this.router.navigate(['/login']);
   }

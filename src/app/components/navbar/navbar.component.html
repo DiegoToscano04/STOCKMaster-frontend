@@ -6,12 +6,14 @@
 
   <span class="navbar-spacer"></span>
 
-  <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-button class="navbar-link">
+  <!-- Mostrar "Iniciar sesión" solo en la página de /home -->
+  <a *ngIf="isInHomePage && !isLoggedIn" [routerLink]="'/login'" mat-button class="navbar-link">
     <mat-icon class="navbar-icon">login</mat-icon>
     Iniciar sesión
   </a>
 
-  <div *ngIf="isLoggedIn" class="navbar-actions">
+  <!-- Mostrar "Cerrar sesión" solo en la página de /admin -->
+  <div *ngIf="isInAdminPage && isLoggedIn" class="navbar-actions">
     <button mat-button class="navbar-link" (click)="logout()">
       <mat-icon class="navbar-icon">logout</mat-icon>
       Cerrar sesión
