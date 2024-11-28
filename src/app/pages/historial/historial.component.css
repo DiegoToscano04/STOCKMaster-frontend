@@ -1,0 +1,231 @@
+.products-container {
+    background: #ffffff;
+     padding: 20px;
+     
+   }
+     .products-header {
+       margin-bottom: 20px;
+       display: flex;
+       gap: 40px;
+       justify-content: flex-start;
+     }
+     
+     .action-btn {
+       font-size: 14px;
+       font-weight: bold;
+     }
+     
+     .separator {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 16px;
+       font-weight: 500;
+       color: #555;
+       border-top: 2px solid #ccc;
+       border-bottom: 2px solid #ccc;
+       padding: 10px 0;
+     }
+     
+     .products-table {
+       overflow-x: auto;
+       margin-top: 10px;
+       
+     }
+     
+     .mat-elevation-z8 {
+       border-radius: 8px;
+       overflow: hidden;
+     }
+     
+     table {
+       width: 100%;
+       border-spacing: 0;
+       border-collapse: collapse;
+     }
+     
+     th, td {
+       padding: 12px 15px;
+       text-align: left;
+     }
+     
+     th {
+       background-color: #007bff;
+       color: rgb(0, 0, 0);
+     }
+     
+     td {
+       border-bottom: 1px solid #ddd;
+     }
+     
+     .cancel-button {
+       display: flex;
+       justify-content: flex-end;
+       margin-top: 10px;
+     }
+     
+     .cancel-button button {
+       font-size: 14px;
+       margin: auto;
+     }
+     
+     button {
+       background: #e0e0e0;
+       border: none;
+       border-radius: 12px;
+       box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+       padding: 10px 20px;
+       font-weight: bold;
+       cursor: pointer;
+       transition: box-shadow 0.2s ease, transform 0.1s ease;
+     }
+     button:hover {
+       box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+       transform: translateY(-2px);
+     }
+     button:active {
+       box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+       transform: translateY(2px);
+     }
+   
+   
+   button[mat-icon-button] {
+     background: #e0e0e0;
+     border-radius: 50%;
+     box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+   }
+   
+   
+   button[mat-icon-button]:hover {
+     box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+   }
+   .products-table {
+     margin-top: 20px;
+     border-radius: 15px;
+     overflow: hidden; 
+     box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+   }
+   table.mat-elevation-z8 {
+     background: #e0e0e0;
+     box-shadow: none; 
+   }
+   th.mat-header-cell,
+   td.mat-cell {
+     color: #555;
+     padding: 15px;
+   }
+   
+   .search-container {
+     background: #e0e0e0;
+     border-radius: 50px; 
+     padding: 10px;
+     box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
+     display: flex;
+     align-items: center;
+   }
+   
+   .search-bar {
+     display: flex;
+     justify-content: center;
+     margin: 20px 0;
+   }
+   
+   .search-container {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+   }
+   
+   .input {
+     border: none;
+     padding: 1rem;
+     border-radius: 2rem; 
+     background: #e8e8e8;
+     font-size: 16px;
+     width: 300px; 
+     box-shadow: 20px 20px 60px #c5c5c5,
+     -20px -20px 60px #ffffff;
+     transition: 0.3s;
+   
+   }
+   
+   .input:focus {
+     outline-color: #e8e8e8;
+     background: #e8e8e8;
+     box-shadow: inset 20px 20px 60px #c5c5c5,inset -20px -20px 60px #ffffff;
+     transition: 0.3s;
+   }
+   
+   .search-button {
+     background: #e8e8e8;
+     border-radius: 50%;
+     padding: 0.5rem;
+     box-shadow: 5px 5px 15px #c5c5c5, -5px -5px 15px #ffffff;
+     cursor: pointer;
+     transition: box-shadow 0.3s ease, transform 0.1s ease;
+   }
+   
+   .search-button:hover {
+     box-shadow: 3px 3px 10px #c5c5c5, -3px -3px 10px #ffffff;
+     transform: translateY(-2px);
+   }
+   
+   .search-button:active {
+     box-shadow: inset 3px 3px 10px #c5c5c5, inset -3px -3px 10px #ffffff;
+     transform: translateY(2px);
+   }
+   
+   .search-button mat-icon {
+     font-size: 24px;
+     color: #555;
+   }
+   
+   
+   .action-btn {
+     background: #e0e0e0;
+     border-radius: 12px;
+     border: none;
+     padding: 10px 20px;
+     font-size: 14px;
+     color: #555;
+     font-weight: bold;
+     text-transform: uppercase;
+     box-shadow: 10px 10px 20px rgba(200, 200, 200, 0.3),
+                 -10px -10px 20px rgba(255, 255, 255, 0.8);
+     transition: all 0.3s ease;
+     outline: none;
+   }
+   
+   
+   .action-btn:hover {
+     box-shadow: inset 8px 8px 15px rgba(200, 200, 200, 0.4),
+                 inset -8px -8px 15px rgba(255, 255, 255, 0.7),
+                 4px 4px 6px rgba(0, 0, 0, 0.1);
+     background: #f0f0f0;
+   }
+   
+   
+   .cancel-button button {
+     background: #e0e0e0;
+     border-radius: 12px;
+     border: none;
+     padding: 10px 20px;
+     font-size: 14px;
+     color: #555;
+     font-weight: bold;
+     text-transform: uppercase;
+     box-shadow: 10px 10px 20px rgba(200, 200, 200, 0.3),
+                 -10px -10px 20px rgba(255, 255, 255, 0.8);
+     transition: all 0.3s ease;
+     outline: none;
+   }
+   
+   .cancel-button button:hover {
+     box-shadow: inset 8px 8px 15px rgba(200, 200, 200, 0.4),
+                 inset -8px -8px 15px rgba(255, 255, 255, 0.7),
+                 4px 4px 6px rgba(0, 0, 0, 0.1);
+     background: #f0f0f0;
+   }
+   
+   
+   

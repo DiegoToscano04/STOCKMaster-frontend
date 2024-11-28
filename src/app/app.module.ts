@@ -28,6 +28,8 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { AddComponent } from './pages/add/add.component';
+import { UpdateComponent } from './pages/update/update.component';
+import { HistorialComponent } from './pages/historial/historial.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { AddComponent } from './pages/add/add.component';
     BienvenidoComponent,
     ProductsComponent,
     AddComponent,
+    UpdateComponent,
+    HistorialComponent,
   ],
   imports: [
     BrowserModule,

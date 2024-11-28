@@ -9,6 +9,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { AddComponent } from './pages/add/add.component';
+import { UpdateComponent } from './pages/update/update.component';
+import { HistorialComponent } from './pages/historial/historial.component';
 
 const routes: Routes = [
   {
@@ -57,6 +59,16 @@ const routes: Routes = [
     component:AddComponent,
     pathMatch:'full'
   },
+  {
+    path:'update',
+    component:UpdateComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'historial',
+    component:HistorialComponent,
+    pathMatch:'full'
+  }
 ];
 
 @NgModule({
