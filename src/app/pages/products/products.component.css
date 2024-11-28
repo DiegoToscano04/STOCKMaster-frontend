@@ -180,7 +180,7 @@ td.mat-cell {
   color: #555;
 }
 
-/* Estilo general para los botones */
+
 .action-btn {
   background: #e0e0e0;
   border-radius: 12px;
@@ -196,7 +196,7 @@ td.mat-cell {
   outline: none;
 }
 
-/* Estilo de neomorphism para los botones al hacer hover */
+
 .action-btn:hover {
   box-shadow: inset 8px 8px 15px rgba(200, 200, 200, 0.4),
               inset -8px -8px 15px rgba(255, 255, 255, 0.7),
@@ -204,7 +204,7 @@ td.mat-cell {
   background: #f0f0f0;
 }
 
-/* Estilo de neomorphism para el botón de cancelar */
+
 .cancel-button button {
   background: #e0e0e0;
   border-radius: 12px;
@@ -220,7 +220,6 @@ td.mat-cell {
   outline: none;
 }
 
-/* Cambiar la sombra para el hover en el botón de cancelar */
 .cancel-button button:hover {
   box-shadow: inset 8px 8px 15px rgba(200, 200, 200, 0.4),
               inset -8px -8px 15px rgba(255, 255, 255, 0.7),

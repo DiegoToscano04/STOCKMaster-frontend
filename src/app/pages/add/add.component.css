@@ -1,0 +1,168 @@
+/* Estilo general */
+* {
+    box-sizing: border-box;
+  }
+  body,
+  html {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    background-color: #ecf0f3;
+  }
+  
+  /* Card de login */
+  .login-card .card-container {
+    width: 430px;
+    max-width: 700px;
+    padding: 50px 30px 30px 30px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+  }
+  
+  /* Logo */
+  .logo-container {
+    background: url(../../../assets/StockMasterLogo.png);
+    background-position: center center;
+    background-size: 115px 115px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3,
+      8px 8px 15px #a7aaaf, -8px -8px 15px #fff;
+  }
+  
+  /* Título */
+  .login-title {
+    text-align: center;
+    font-size: 28px;
+    padding-top: 24px;
+    color: #3f51b5;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Subtítulo */
+  .login-subtitle {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 7px;
+    color: #6b6f82;
+    margin-bottom: 25px;
+  }
+  
+  /* Contenedor de campos */
+  .fields {
+    width: 100%;
+    padding: 35px 5px 5px 5px;
+  }
+  
+  /* Inputs */
+  .fields input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 15px;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .username,
+  .password,
+  .email,
+  .phone {
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+  }
+  
+  .fields svg {
+    height: 22px;
+    margin: 0 10px -3px 25px;
+  }
+  
+  /* Botones */
+  .login-button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  }
+  
+  .login-button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  }
+  
+  .cancel-button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e92727;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  }
+  
+  .cancel-button:active {
+    color: #8d3434;
+    box-shadow: inset 4px 4px 12px #952626, inset -4px -4px 12px #952626;
+  }
+  
+  /* Contenedor de botones */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 20px;
+    background-color: #f4f7f9;
+  }
+  
+  @media (max-width: 600px) {
+    .login-card .card-container {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
+    .login-title {
+      font-size: 1.5em;
+    }
+  
+    .login-subtitle {
+      font-size: 0.9em;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .login-button,
+    .cancel-button {
+      padding: 10px;
+    }
+  }
+  

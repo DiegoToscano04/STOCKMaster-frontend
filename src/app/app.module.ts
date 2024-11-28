@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { AddComponent } from './pages/add/add.component';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import { ProductsComponent } from './pages/products/products.component';
     SidebarComponent,
     BienvenidoComponent,
     ProductsComponent,
+    AddComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { ProductsComponent } from './pages/products/products.component';
     MatListModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

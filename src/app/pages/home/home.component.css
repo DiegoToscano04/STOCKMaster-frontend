@@ -1,0 +1,145 @@
+/* From Uiverse.io by gharsh11032000 */ 
+.button {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #d4af37 0%, #006aff 100%); 
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #d4af37 0%, #006aff 100%); 
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .button:hover::after {
+    filter: blur(30px);
+  }
+  
+  .button:hover::before {
+    transform: rotate(-180deg);
+  }
+  
+  .button:active::before {
+    scale: 0.7;
+  }
+  
+
+
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    
+    font-family: "Lato", sans-serif;
+    padding: 20px;
+  }
+  
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .home-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+
+  .home-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .home-subtitle {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 30px;
+  }
+  
+  .home-actions {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .home-btn {
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 
+                -5px -5px 10px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+  }
+  
+  .home-btn:hover {
+    transform: scale(1.05);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+  }
+  
+  .home-btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+                inset -10px -10px 20px rgba(255, 255, 255, 0.7);
+  }
+  
+ 
+  .home-footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  

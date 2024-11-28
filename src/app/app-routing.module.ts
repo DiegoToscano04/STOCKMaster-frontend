@@ -8,12 +8,14 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { AddComponent } from './pages/add/add.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component:HomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+
   },
   {
     path:'signup',
@@ -49,7 +51,12 @@ const routes: Routes = [
     path:'products',
     component:ProductsComponent,
     pathMatch:'full'
-  }
+  },
+  {
+    path:'add',
+    component:AddComponent,
+    pathMatch:'full'
+  },
 ];
 
 @NgModule({

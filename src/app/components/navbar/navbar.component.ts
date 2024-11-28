@@ -11,25 +11,26 @@ export class NavbarComponent implements OnInit {
   isInHomePage = false;  
   isInAdminPage = false; 
   isInProductsPage = false; 
+  isLogoClickable = false; 
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-    
-        this.isInHomePage = event.url === '/home';
+        this.isInHomePage = event.url === '/';
         this.isInAdminPage = event.url === '/admin';
         this.isInProductsPage = event.url === '/products';
 
-      
+        this.isLogoClickable = event.url === '/' || event.url === '/login';
+        
         this.updateLoginStatus();
       }
     });
   }
 
   updateLoginStatus(): void {
-   
+    
   }
 
   logout(): void {

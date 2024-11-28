@@ -1,11 +1,20 @@
-<div class ="bootstrap-wrapper">
-    <div class = "container">
-        <div class ="row mt20">
-            <div class = "col-md-6 offset-md-3 text-center">
-                <h1>Bienvenido a STOCKMaster</h1>
-                <button mat-raised-button color = "primary">Inicio</button>
-
-            </div>
-        </div>
+<div class="home-wrapper">
+    <div class="home-container">
+      <div class="home-header">
+        <img src="../../../assets/LogoDorado.png" alt="STOCKMaster Logo" class="home-logo" />
+        <h1 class="home-title">Bienvenido a STOCKMaster</h1>
+        <p class="home-subtitle">
+          Tu solución para la gestión de inventarios y ventas.
+        </p>
+      </div>
+  
+      <div class="home-actions">
+        <button class="button" [routerLink]="'/login'">Empezar</button>
+      </div>
     </div>
-</div>
+  
+    <div class="home-footer">
+      <p>Optimiza tu negocio con STOCKMaster. © 2024 Todos los derechos reservados.</p>
+    </div>
+  </div>
+  
