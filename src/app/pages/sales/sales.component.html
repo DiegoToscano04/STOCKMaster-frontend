@@ -1,0 +1,67 @@
+<div class="products-container">
+
+    <div class="separator">
+      <span>En esta parte puede filtrar sus ventas </span>
+    </div>
+
+    <div class="search-bar">
+      <div class="search-container">
+       <input
+          type="text"
+          name="text"
+           class="input"
+           placeholder="Buscar..."
+          (keyup)="applyFilter($event)" />
+        <button mat-icon-button class="search-button">
+           <mat-icon>search</mat-icon>
+        </button>
+       </div>
+     </div>
+ 
+    <div class="products-table">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="id_factura">
+          <th mat-header-cell *matHeaderCellDef> Factura ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id_factura}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cliente_documento">
+          <th mat-header-cell *matHeaderCellDef> Documento Cliente</th>
+          <td mat-cell *matCellDef="let element"> {{element.cliente_documento}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="cliente_nombre">
+          <th mat-header-cell *matHeaderCellDef> Cliente Nombre </th>
+          <td mat-cell *matCellDef="let element"> {{element.cliente_nombre}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="empleado_id">
+          <th mat-header-cell *matHeaderCellDef> Empleado ID</th>
+          <td mat-cell *matCellDef="let element"> {{element.empleado_id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fecha">
+          <th mat-header-cell *matHeaderCellDef> Fecha Venta </th>
+          <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="valortotal">
+            <th mat-header-cell *matHeaderCellDef> Valor Total </th>
+            <td mat-cell *matCellDef="let element"> {{element.valortotal}} </td>
+          </ng-container>
+        
+      
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+              <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+              
+    </div>
+  
+    <div class="cancel-button">
+      <button mat-raised-button color="warn" [routerLink]="'/products'">Regresar</button>
+    </div>
+  </div>
+  

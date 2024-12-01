@@ -11,6 +11,9 @@ import { ProductsComponent } from './pages/products/products.component';
 import { AddComponent } from './pages/add/add.component';
 import { UpdateComponent } from './pages/update/update.component';
 import { HistorialComponent } from './pages/historial/historial.component';
+import { SalesComponent } from './pages/sales/sales.component';
+import { UserBienvenidoComponent } from './pages/user/user-bienvenido/user-bienvenido.component';
+import { UserSidebarComponent } from './pages/user/user-sidebar/user-sidebar.component';
 
 const routes: Routes = [
   {
@@ -24,6 +27,7 @@ const routes: Routes = [
     component:SignupComponent,
     pathMatch:'full'
   },
+  
   {
     path: 'login',
     component:LoginComponent,
@@ -45,11 +49,6 @@ const routes: Routes = [
    ]
   },
   {
-    path:'user-dashboard',
-    component:UserDashboardComponent,
-    pathMatch: 'full'
-  },
-  {
     path:'products',
     component:ProductsComponent,
     pathMatch:'full'
@@ -68,7 +67,41 @@ const routes: Routes = [
     path:'historial',
     component:HistorialComponent,
     pathMatch:'full'
+  },
+  {
+    path:'sales',
+    component:SalesComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'user-bienvenido',
+    component:UserBienvenidoComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'user-sidebar',
+    component:UserSidebarComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'user-dashboard',
+    component:UserDashboardComponent,
+    children:[
+      {
+          path:'profile',
+          component:ProfileComponent
+      },
+      {
+        path:'',
+        component: UserBienvenidoComponent
+      },
+      {
+        path:'products',
+        component:ProductsComponent
+      }
+    ]
   }
+
 ];
 
 @NgModule({

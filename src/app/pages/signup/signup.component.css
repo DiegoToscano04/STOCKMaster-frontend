@@ -72,11 +72,18 @@
   font-family: "Lato", sans-serif;
   letter-spacing: 0px;  
 }
-
+.genre{
+  margin-bottom: 15px;
+}
 .username,
 .password,
-.email,
-.phone{
+.name,
+.lastname,
+.rol,
+.salary,
+.date,
+.document
+{
   margin-bottom: 30px;
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
@@ -181,4 +188,20 @@
       padding: 10px;
     }
   }
-  
+
+/* Estilo neumórfico para el select */
+#genero {
+  margin-left: 70px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #e0e0e0;
+  color: #555;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}

@@ -16,6 +16,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule } from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -30,6 +31,9 @@ import { ProductsComponent } from './pages/products/products.component';
 import { AddComponent } from './pages/add/add.component';
 import { UpdateComponent } from './pages/update/update.component';
 import { HistorialComponent } from './pages/historial/historial.component';
+import { SalesComponent } from './pages/sales/sales.component';
+import { UserBienvenidoComponent } from './pages/user/user-bienvenido/user-bienvenido.component';
+import { UserSidebarComponent } from './pages/user/user-sidebar/user-sidebar.component';
 
 
 @NgModule({
@@ -48,6 +52,9 @@ import { HistorialComponent } from './pages/historial/historial.component';
     AddComponent,
     UpdateComponent,
     HistorialComponent,
+    SalesComponent,
+    UserBienvenidoComponent,
+    UserSidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +70,8 @@ import { HistorialComponent } from './pages/historial/historial.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,89 @@
+
+.admin-dashboard {
+  
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f0f0f3;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    font-family: "Lato", sans-serif;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #d1d1d4, -8px -8px 16px #ffffff;
+    background-color: #f0f0f3;
+    text-align: center;
+  }
+  
+  .dashboard-card {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #d1d1d4, -8px -8px 16px #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+
+  .dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+
+  .dashboard-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+ .section-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f7f7f9;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 1);
+}
+
+
+.section-card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+
+.section-card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+
+.section-card i {
+  margin-bottom: 15px;
+}
+
+.icon-1 {
+  color: #4CAF50;
+}
+
+.icon-2 {
+  color: #FFC107; 
+}

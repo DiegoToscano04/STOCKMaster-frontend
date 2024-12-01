@@ -6,7 +6,7 @@
         <p class="login-subtitle">Rellene los campos</p>
   
         <!-- Formulario -->
-        <form (ngSubmit)="addProduct()">
+        <form (ngSubmit)="formSubmit()">
           <div class="fields">
             <!-- Nombre -->
             <div class="username">
@@ -17,11 +17,12 @@
                 type="text"
                 required
                 class="user-input"
-                [(ngModel)]="product.name"
+                [(ngModel)]="addProduct.name"
                 placeholder="Nombre"
                 name="name"
               />
             </div>
+            <div *ngIf="errorMessages.name" class="error-message">{{ errorMessages.name }}</div>
   
             <!-- Tipo -->
             <div class="username">
@@ -32,11 +33,12 @@
                 type="text"
                 required
                 class="user-input"
-                [(ngModel)]="product.type"
+                [(ngModel)]="addProduct.type"
                 placeholder="Tipo"
                 name="type"
               />
             </div>
+            <div *ngIf="errorMessages.type" class="error-message">{{ errorMessages.type }}</div>
   
             <!-- Valor Unitario -->
             <div class="password">
@@ -49,12 +51,13 @@
                 type="number"
                 required
                 class="pass-input"
-                [ngModel]="product.unitValue || ''"
-                (ngModelChange)="product.unitValue = $event"
+                [ngModel]="addProduct.unitValue || ''"
+                (ngModelChange)="addProduct.unitValue = $event"
                 placeholder="Valor Unitario"
                 name="unitValue"
               />
               </div>
+              <div *ngIf="errorMessages.unitValue" class="error-message">{{ errorMessages.unitValue }}</div>
               
   
             <!-- Valor Venta -->
@@ -66,13 +69,13 @@
                 type="number"
                 required
                 class="pass-input"
-                [ngModel]="product.saleValue || ''"
-                (ngModelChange)="product.saleValue = $event"
+                [ngModel]="addProduct.saleValue || ''"
+                (ngModelChange)="addProduct.saleValue = $event"
                 placeholder="Valor Venta"
                 name="saleValue"
               />
             </div>
-  
+            <div *ngIf="errorMessages.saleValue" class="error-message">{{ errorMessages.saleValue }}</div>
             <!-- Cantidad -->
             <div class="phone">
                 <svg class="svg-icon" viewBox="0 0 20 20">
@@ -82,13 +85,13 @@
                 type="number"
                 required
                 class="pass-input"
-                [ngModel]="product.quantity || ''"
-                (ngModelChange)="product.quantity = $event"
+                [ngModel]="addProduct.quantity || ''"
+                (ngModelChange)="addProduct.quantity = $event"
                 placeholder="Cantidad"
                 name="quantity"
               />
             </div>
-  
+            <div *ngIf="errorMessages.quantity" class="error-message">{{ errorMessages.quantity }}</div>
             <!-- Referencia -->
             <div class="phone">
                 <svg class="svg-icon" viewBox="0 0 20 20">
@@ -98,17 +101,18 @@
                 type="text"
                 required
                 class="pass-input"
-                [(ngModel)]="product.reference"
+                [(ngModel)]="addProduct.reference"
                 placeholder="Referencia"
                 name="reference"
               />
             </div>
+            <div *ngIf="errorMessages.reference" class="error-message">{{ errorMessages.reference }}</div>
   
             <!-- Botones -->
             <div class="button-container">
               <button class="login-button" type="submit">Agregar</button>
               <button class="cancel-button" type="button" [routerLink]="'/products'">
-                Cancelar
+                Regresar
               </button>
             </div>
           </div>

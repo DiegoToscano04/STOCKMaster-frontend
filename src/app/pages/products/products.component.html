@@ -1,74 +1,87 @@
 <div class="products-container">
 
-    <div class="products-header">
-      <button  routerLink="/update"class="action-btn">Actualizar</button>
-      <button routerLink="/add" class="action-btn">Agregar</button>
-      <button routerLink="/historial" class="action-btn">Historial</button>
-      <button  class="action-btn">Ventas</button>
-    </div>
-  
+  <div class="products-header">
+    <button  routerLink="/update"class="action-btn">Actualizar</button>
+    <button routerLink="/add" class="action-btn">Agregar</button>
+    <button routerLink="/historial" class="action-btn">Historial</button>
+    <button  routerLink="/sales"class="action-btn">Ventas</button>
+  </div>
 
-    <div class="separator">
-      <span>En esta parte puede filtrar sus productos</span>
-    </div>
 
-    <div class="search-bar">
-        <div class="search-container">
-          <input type="text" name="text" class="input" placeholder="Buscar...">
-          <button mat-icon-button class="search-button">
-            <mat-icon>search</mat-icon>
-          </button>
-        </div>
-      </div>
- 
-    <div class="products-table">
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-                <ng-container matColumnDef="id">
-                  <th mat-header-cell *matHeaderCellDef> ID </th>
-                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-                </ng-container>
+  <div class="separator">
+    <span>En esta parte puede filtrar sus productos</span>
+  </div>
 
-                <ng-container matColumnDef="nombre">
-                  <th mat-header-cell *matHeaderCellDef> Nombre</th>
-                  <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-                </ng-container>
-              
-                <ng-container matColumnDef="valorUnitario">
-                  <th mat-header-cell *matHeaderCellDef> Valor Unitario </th>
-                  <td mat-cell *matCellDef="let element"> {{element.valorUnitario}} </td>
-                </ng-container>
-
-                <ng-container matColumnDef="valorVenta">
-                  <th mat-header-cell *matHeaderCellDef> Valor Venta </th>
-                  <td mat-cell *matCellDef="let element"> {{element.valorVenta}} </td>
-                </ng-container>
-
-                <ng-container matColumnDef="cantidad">
-                  <th mat-header-cell *matHeaderCellDef> Cantidad </th>
-                  <td mat-cell *matCellDef="let element"> {{element.cantidad}}% </td>
-                </ng-container>
-
-                <ng-container matColumnDef="categoria">
-                  <th mat-header-cell *matHeaderCellDef> Categoría </th>
-                  <td mat-cell *matCellDef="let element"> {{element.categoria}} </td>
-                </ng-container>
-                
-                <ng-container matColumnDef="referencia">
-                  <th mat-header-cell *matHeaderCellDef> Referencia </th>
-                  <td mat-cell *matCellDef="let element"> {{element.referencia}} </td>
-                </ng-container>
-              
-              
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-              </table>
-
-              <mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
-              
-    </div>
-  
-    <div class="cancel-button">
-      <button mat-raised-button color="warn" [routerLink]="'/admin'">Regresar</button>
+  <div class="search-bar">
+    <div class="search-container">
+      <input
+        type="text"
+        name="text"
+        class="input"
+        placeholder="Buscar..."
+        (keyup)="applyFilter($event)" />
+      <button mat-icon-button class="search-button">
+        <mat-icon>search</mat-icon>
+      </button>
     </div>
   </div>
+
+ 
+  <div class="products-table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+     
+      <ng-container matColumnDef="id_producto">
+        <th mat-header-cell *matHeaderCellDef> ID Producto </th>
+        <td mat-cell *matCellDef="let element"> {{ element.id_producto }} </td>
+      </ng-container>
+
+    
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{ element.nombre }} </td>
+      </ng-container>
+
+    
+      <ng-container matColumnDef="tipo">
+        <th mat-header-cell *matHeaderCellDef> Categoría </th>
+        <td mat-cell *matCellDef="let element"> {{ element.tipo }} </td>
+      </ng-container>
+
+   
+      <ng-container matColumnDef="valorUnitario">
+        <th mat-header-cell *matHeaderCellDef> Valor Unitario </th>
+        <td mat-cell *matCellDef="let element"> {{ element.valorUnitario }} </td>
+      </ng-container>
+
+   
+      <ng-container matColumnDef="valorVenta">
+        <th mat-header-cell *matHeaderCellDef> Valor Venta </th>
+        <td mat-cell *matCellDef="let element"> {{ element.valorVenta }} </td>
+      </ng-container>
+
+      
+      <ng-container matColumnDef="cantidadTotal">
+        <th mat-header-cell *matHeaderCellDef> Cantidad Total </th>
+        <td mat-cell *matCellDef="let element"> {{ element.cantidadTotal }} </td>
+      </ng-container>
+
+     
+      <ng-container matColumnDef="referencia">
+        <th mat-header-cell *matHeaderCellDef> Referencia </th>
+        <td mat-cell *matCellDef="let element"> {{ element.referencia }} </td>
+      </ng-container>
+
+ 
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+    <mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+
+  </div>
   
+  <div class="cancel-button">
+    <button mat-raised-button color="warn" [routerLink]="'/admin'">Regresar</button>
+  </div>
+  </div>
